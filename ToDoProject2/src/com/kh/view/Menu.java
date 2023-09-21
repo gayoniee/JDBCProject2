@@ -87,6 +87,9 @@ public class Menu {
 		
 	}
 	
+	// 카테고리 메뉴 => 카테고리 생성, 제목수정, 일정관리로 넘어가기
+	
+	
 	public void toDoMenu(User u) {
 		
 		while(true) {
