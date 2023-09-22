@@ -43,6 +43,14 @@ public class Schedule {
 	}
 
 
+	public Schedule(int scheduleId, String title, String detail, Date deadline, String clear) {
+		super();
+		this.scheduleId = scheduleId;
+		this.title = title;
+		this.detail = detail;
+		this.deadline = deadline;
+		this.clear = clear;
+	}
 
 	public int getScheduleId() {
 		return scheduleId;

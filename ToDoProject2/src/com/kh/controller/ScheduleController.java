@@ -57,7 +57,6 @@ public class ScheduleController {
 		Schedule s = new Schedule();
 		
 		s.setScheduleId(u.getUserNo());
-		s.setScheduleNo(Integer.parseInt(scheduleId));
 		s.setTitle(title);
 		s.setDetail(detail);
 		s.setDeadline(transformDate(deadline));
