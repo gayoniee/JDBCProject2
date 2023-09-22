@@ -5,11 +5,11 @@ import java.sql.Date;
 public class Schedule {
 	
 	private int scheduleId;
-	private int scheduleNo;
 	private String title;
 	private String detail;
 	private Date deadline;
 	private String clear;
+	private int categoryId;
 	
 	public Schedule() {
 		super();
@@ -17,23 +17,23 @@ public class Schedule {
 
 	
 	
-	public Schedule(int scheduleNo, String title, String detail, Date deadline, String clear) {
-		this.scheduleNo = scheduleNo;
+	public Schedule(String title, String detail, Date deadline, String clear, int categoryId) {
 		this.title = title;
 		this.detail = detail;
 		this.deadline = deadline;
 		this.clear = clear;
+		this.categoryId = categoryId;
 	}
 
 
-	public Schedule(int scheduleId, int scheduleNo, String title, String detail, Date deadline, String clear) {
+	public Schedule(int scheduleId, String title, String detail, Date deadline, String clear, int categoryId) {
 		super();
 		this.scheduleId = scheduleId;
-		this.scheduleNo = scheduleNo;
 		this.title = title;
 		this.detail = detail;
 		this.deadline = deadline;
 		this.clear = clear;
+		this.categoryId = categoryId;
 	}
 
 	public Schedule(String title, String detail, Date deadline) {
@@ -52,12 +52,12 @@ public class Schedule {
 		this.scheduleId = scheduleId;
 	}
 
-	public int getScheduleNo() {
-		return scheduleNo;
+	public int getCategoryId() {
+		return categoryId;
 	}
 
-	public void setScheduleNo(int scheduleNo) {
-		this.scheduleNo = scheduleNo;
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public String getTitle() {
@@ -94,8 +94,7 @@ public class Schedule {
 
 	@Override
 	public String toString() {
-		return scheduleNo + ", " + title + ", "
-				+ detail + ", " + deadline + ", " + clear;
+		return  title + ", " + detail + ", " + deadline + ", " + clear + ", " + categoryId;
 	}
 	
 	

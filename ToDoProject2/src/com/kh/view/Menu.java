@@ -88,7 +88,13 @@ public class Menu {
 	}
 	
 	// 카테고리 메뉴 => 카테고리 생성, 제목수정, 일정관리로 넘어가기
-	
+	public void categoryMenu(User u) {
+		System.out.println("\n==Category-Menu==");
+		System.out.println("1. 카테고리 추가");
+		System.out.println("2. 카테고리 제목 수정");
+		System.out.println("3. 카테고리 삭제");
+		System.out.println("4. 카테고리 선택");  // -> 일정 넣을 카테고리 선택 후 일정 등록 화면으로 이동
+	}
 	
 	public void toDoMenu(User u) {
 		
@@ -97,11 +103,12 @@ public class Menu {
 			System.out.println("\n==To-Do Menu==");
 			System.out.println("1. 일정 추가");
 			System.out.println("2. 내 일정 조회");
-			System.out.println("3. 일정 수정");  // 수행여부만 바꾸는 것 시도
+			System.out.println("3. 일정 수정");
 			System.out.println("4. 일정 삭제");
 			System.out.println("5. 내 정보 수정");
 			System.out.println("6. 내 정보 조회");
-			System.out.println("7. 회원 탈퇴");  // 탈퇴하면 메인메뉴로
+			System.out.println("7. 카테고리 메뉴");
+			System.out.println("8. 회원 탈퇴");  // 탈퇴하면 메인메뉴로			
 			System.out.println("0. 로그아웃");
 			
 			System.out.print(">> 메뉴 선택 : ");
@@ -125,9 +132,12 @@ public class Menu {
 					updateUser(u);
 				}break;
 				case 6:{
-					System.out.println(u.toString());
+					uc.viewMyInfo(u);
 				}break;
 				case 7:{
+					categoryMenu(u);
+				}break;
+				case 8:{
 					deleteUser(u);
 				}break;
 				case 0:{
@@ -254,5 +264,9 @@ public class Menu {
 		public void deleteSuccess(String message) {
 			System.out.println("\n" + message);
 			mainMenu();
+		}
+		
+		public void displayUsers(User user) {
+			System.out.println("\n" + user.toString());
 		}
 }
