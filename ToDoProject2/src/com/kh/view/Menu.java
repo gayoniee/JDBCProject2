@@ -89,11 +89,23 @@ public class Menu {
 	
 	// 카테고리 메뉴 => 카테고리 생성, 제목수정, 일정관리로 넘어가기
 	public void categoryMenu(User u) {
-		System.out.println("\n==Category-Menu==");
-		System.out.println("1. 카테고리 추가");
-		System.out.println("2. 카테고리 제목 수정");
-		System.out.println("3. 카테고리 삭제");
-		System.out.println("4. 카테고리 선택");  // -> 일정 넣을 카테고리 선택 후 일정 등록 화면으로 이동
+		while(true) {
+			
+			System.out.println("\n==Category-Menu==");
+			System.out.println("1. 카테고리 추가");
+			System.out.println("2. 카테고리 제목 수정");
+			System.out.println("3. 카테고리 삭제");
+			System.out.println("4. 카테고리 선택");  // -> 일정 넣을 카테고리 선택 후 일정 등록 화면으로 이동
+			System.out.println("5. 뒤로가기");
+			
+			System.out.print(">> 메뉴 선택 : ");
+			int menu = sc.nextInt();
+			sc.nextLine();
+			
+			switch(menu) {
+				
+			}
+		}
 	}
 	
 	public void toDoMenu(User u) {
